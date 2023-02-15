@@ -1,0 +1,16 @@
+{
+  "climate": "#string",
+  "created": "#string",
+  "diameter": "#string",
+  "edited": "#string",
+  "films": "#array",
+  "gravity": "#string",
+  "name": "#string",
+  "orbital_period": "#string",
+  "population": "#string",
+  "residents": "#array",
+  "rotation_period": "#string",
+  "surface_water": "#string",
+  "terrain": "#string",
+  "url": "#string"
+}

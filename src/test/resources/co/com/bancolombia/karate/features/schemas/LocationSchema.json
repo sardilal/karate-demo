@@ -1,9 +1,0 @@
-{
-  "id": "#number",
-  "name": "#string",
-  "type": "#string",
-  "dimension": "#string",
-  "residents": "#array",
-  "url": "#string",
-  "created": "#string"
-}

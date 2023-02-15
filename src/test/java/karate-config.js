@@ -1,7 +1,7 @@
 function fn() {
 
   config = {
-    urlBase: 'https://rickandmortyapi.com',
+    urlBase: 'https://swapi.dev/api/',
   };
 
   karate.configure('connectTimeout', 5000);
