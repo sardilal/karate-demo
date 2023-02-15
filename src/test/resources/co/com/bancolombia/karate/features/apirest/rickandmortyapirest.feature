@@ -2,25 +2,25 @@ Feature: Rick and Morty Api Rest
 
   Background: Set urlBase
     * url urlBase
-    * def earthLocation = read('../schemas/EarthLocation.json')
-    * def locationSchema = read('../schemas/LocationSchema.json')
+    * def tatooineplanet = read('../schemas/TatooinePlanet.json')
+    * def planetSchema = read('../schemas/PlanetSchema.json')
 
   @API
   Scenario: GET Characters
-    Given path '/api/character'
+    Given path '/people'
     When method GET
     Then status 200
-    * match each $.results[*].id == '#number'
+    * match each $.results[*].name == '#string'
 
-  Scenario: GET Location
-    Given path '/api/location'
+  Scenario: GET planets
+    Given path '/planets'
     When method GET
     Then status 200
-    * match $.info == {count: "#number", pages: "#number", next: "https://rickandmortyapi.com/api/location?page=2", prev: "#null"}
-    * match each $.results[*] == locationSchema
+    * match $ == {count: "#number", next: "https://swapi.dev/api/planets/?page=2", previous: "#null", results: "#array"}
+    * match each $.results[*] == planetSchema
 
-  Scenario: GET Earth Location
-    Given path '/api/location/1'
+  Scenario: GET Tatooine Planet
+    Given path '/planets/1'
     When method GET
     Then status 200
-    * match response == earthLocation
+    * match response == tatooineplanet
