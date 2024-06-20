@@ -1,4 +1,4 @@
-Feature: Rick and Morty Api Rest
+Feature: SWAPI Test
 
   Background: Set urlBase
     * url urlBase
